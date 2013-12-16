@@ -37,7 +37,7 @@ class sfWebDebugPanelLess extends sfWebDebugPanel
    */
   public function getTitle()
   {
-    return '<img src="/sfLessPhpPlugin/images/css_go.png" alt="LESS helper" height="16" width="16" /> less';
+    return '<img src="'.$this->webDebug->getOption('image_root_path').'/../../../sfLessPhpPlugin/images/css_go.png" alt="LESS helper" height="16" width="16" /> Less';
   }
 
   /**
@@ -53,7 +53,7 @@ class sfWebDebugPanelLess extends sfWebDebugPanel
    */
   public function getPanelContent()
   {
-    $panel = $this->getConfigurationContent() . '<table class="sfWebDebugLogs" style="width: 300px"><tr><th>less file</th><th>css file</th><th style="text-align:center;">time (ms)</th></tr>';
+    $panel = $this->getConfigurationContent() . '<table class="sfWebDebugLogs" style="width: 300px;"><tr><th>less file</th><th>css file</th><th style="text-align:center;">time (ms)</th></tr>';
     $errorDescriptions = sfLessPhp::getCompileErrors();
     foreach (sfLessPhp::getCompileResults() as $info)
     {
