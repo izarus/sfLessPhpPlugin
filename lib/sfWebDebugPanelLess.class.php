@@ -37,7 +37,7 @@ class sfWebDebugPanelLess extends sfWebDebugPanel
    */
   public function getTitle()
   {
-    return '<img src="'.$this->webDebug->getOption('image_root_path').'/../../../sfLessPhpPlugin/images/css_go.png" alt="LESS helper" height="16" width="16" /> Less';
+    return '<img src="'.$this->webDebug->getOption('image_root_path').'/../../sf_default/images/icons/folder16.png" alt="LESS helper" height="16" width="16" /> Less';
   }
 
   /**
